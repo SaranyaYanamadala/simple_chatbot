@@ -17,7 +17,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-if promt := st.chat_input("Say something....") :
+if prompt := st.chat_input("Say something....") :
   ## Add user message to the chat history
   st.session_state.messages.append({"role" : "user", "content" : prompt})
   with st.chat_message("user") :
